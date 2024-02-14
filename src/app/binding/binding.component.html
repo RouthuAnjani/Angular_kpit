@@ -1,0 +1,11 @@
+<form (ngSubmit)="submitHandler(form)" #form="ngForm">
+    <div class="container">
+        <h2>Two Way Data Binding</h2>
+        <p><input name="name" placeholder="Enter name" [(ngModel)]="username"></p>
+        <button type="submit" class="btn btn-success" [disabled]="!form.touched">Submit</button>
+    </div>
+</form>
+
+<div *ngIf="data!==null">
+    <p>{{username}}</p>
+</div>

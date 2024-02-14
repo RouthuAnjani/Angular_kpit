@@ -1,0 +1,18 @@
+<h5 class="card-title">Add Student</h5>
+<form (ngSubmit)="addStudentHandler(form)" #form="ngForm">
+<div>
+    <div><label>StudentId:</label></div>
+    <input type="text" [(ngModel)]="id" required class="form-control" name="id">
+</div>
+<div>
+    <div><label>StudentName:</label></div>
+    <input type="text" [(ngModel)]="name" required class="form-control" name="name">
+</div>
+<div>
+    <div><label>StudentScore:</label></div>
+    <input type="text" [(ngModel)]="score" required class="form-control" name="score">
+</div>
+<div>
+    <button class="btn btn-success" [disabled]="form.invalid">Submit</button>
+</div>
+</form>

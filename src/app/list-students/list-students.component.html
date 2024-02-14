@@ -1,0 +1,16 @@
+<table class="table table-hover table-bordered">
+    <thead style="background-color: rgb(96, 234, 234)">
+        <tr>
+            <th scope="col">Student Id</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Student Score</th>
+        </tr>
+    </thead>
+    <tbody style="background-color: rgb(172, 239, 218);">
+        <tr *ngFor="let student of students" [ngStyle]="{backgroundColor:getBackgroundColor()}">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.score}}</td>
+        </tr>
+    </tbody>
+</table>
